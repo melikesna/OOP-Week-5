@@ -1,0 +1,32 @@
+public class Circle {
+    // Declare private constant PI
+    private static final double PI = 3.141519;
+
+    // Declare private variable radius
+    private double radius;
+
+    // Constructor with an argument to set radius
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Method to compute the area of a circle
+    public double computeArea() {
+        return PI * radius * radius;
+    }
+
+    public static void main(String[] args) {
+        // Create three different circle instances with radii 5, 10, 15
+        Circle circle1 = new Circle(5);
+        Circle circle2 = new Circle(10);
+        Circle circle3 = new Circle(15);
+
+        // Put them in an array
+        Circle[] circles = {circle1, circle2, circle3};
+
+        // Print areas using a for-each loop
+        for (Circle circle : circles) {
+            System.out.println("Radius: " + circle.radius + ", Area: " + circle.computeArea());
+        }
+    }
+}
